@@ -6,7 +6,8 @@ import {
   App,
   TimerWrapper,
   ButtonContainer,
-  StartButtonContainer
+  StartButtonContainer,
+  Instructions,
 } from "../components/Containers/Containers.style";
 import { TimerButton, Start } from "../components/Buttons/Button.style";
 import Modal from "../components/Modal/Modal";
@@ -45,7 +46,6 @@ const Home = () => {
 
   const toggleModal = (time) => {
     setShowModal((prev) => !prev);
-    console.log("apareceu o tempo de " + time + " segundos");
   };
 
   const renderTime = ({ remainingTime }) => {
@@ -85,6 +85,12 @@ const Home = () => {
           {renderTime}
         </CountdownCircleTimer>
       </TimerWrapper>
+      <Instructions>
+        <p>
+          Tire uma pausa de toda a correria do dia-a-dia e aprecie um tempo para
+          acalmar a mente.
+        </p>
+      </Instructions>
 
       <ButtonContainer>
         <TimerButton onClick={() => setTimeDuration(2)}>

@@ -40,3 +40,17 @@ export const StartButtonContainer = styled.div`
   width: 100%;
   padding: 20px;
 `;
+
+export const Instructions = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  color: ${({ theme }) => theme.colors.white};
+
+  p {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+  }
+`;
